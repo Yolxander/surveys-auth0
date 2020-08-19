@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import LoginButton from './components/Login-Button';
+import LogoutButton from './components/Logout-Button';
+import { useAuth0 } from '@auth0/auth0-react';
+import User from './pages/User';
+import Home from './pages/Home';
+import './style.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	const { isLoading } = useAuth0();
+
+	return (
+		<div className="container">
+			<div className="nav-bar">
+				<div className="app-name">
+					Surveys
+				</div>
+				<div className="nav-buttons">
+					<LoginButton />
+					<LogoutButton />
+				</div>
+			</div>
+			<div>
+				<User />
+			</div>
+			<div>
+				<Home />
+			</div>
+		</div>
+	);
+};
 
 export default App;
+
+
+  
