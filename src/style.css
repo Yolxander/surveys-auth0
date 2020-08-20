@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 600px;
+	background-image: url("/src/img/rating-stars.jpg");
+}
+
+.nav-bar {
+	display: flex;
+	justify-content: space-between;
+	width: 95%;
+	border-radius: 10px;
+	height: 50px;
+}
+
+.app-name {
+	margin: 5px;
+}
+
+.button {
+	color: black;
+	text-transform: uppercase;
+	height: auto;
+	width: inherit;
+	text-shadow: 0px 2px rgba(77, 77, 77, 0.5);
+	box-shadow: 0px 2px rgba(77, 77, 77, 1);
+	cursor: pointer;
+	margin: 10px;
+	border-radius: 20px;
+}
+.button:hover {
+	transform: scale(1.3);
+}
+
+.button:active {
+	text-shadow: 0px 2px rgba(77, 77, 77, 0.5);
+	box-shadow: 0px 3px rgba(77, 77, 77, 1);
+	transform: translateY(6px);
+}
+/* home-section */
+
+.container-home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.login-button {
+	perspective: 3000px;
+	width: 30%;
+	position: absolute;
+	left: 50%;
+	top: 70%;
+	transform: translate(-50%, -50%);
+	transform-style: preserve-3d;
+}
+.login-button button {
+	transform: rotateX(70deg) rotateZ(-60deg) translate3d(-120px, 0px, 70px);
+	box-shadow: -80px 60px 15px 5px rgba(0, 0, 0, 0.4);
+	transition: 0.4s;
+	transform-style: preserve-3d;
+	height: 80px;
+	background-color:#007FFF;
+	width: 100%;
+}
+.login-button:hover button {
+	transform: rotateX(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px);
+	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.intro {
+	margin-top: 20px;
+	font-size: 50px;
+}
+
+h3 {
+	font-family: 'Lobster', cursive;
+}
